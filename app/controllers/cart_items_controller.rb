@@ -1,18 +1,12 @@
+# frozen_string_literal: true
+
 class CartItemsController < ApplicationController
-  before_action :set_cart_item, only: %i[ destroy ]
+  before_action :set_cart_item, only: %i[destroy]
 
-
-
-
-  #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  # SOIT SUPRIMER LES METHODES COMMENTEES 
+  # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  # SOIT SUPRIMER LES METHODES COMMENTEES
   # SOIT RAJOUTER UPDATE AU BEFORE_ACTION & ROUTES.RB SI ON FAIT LA PARTIE OPTIONNEL
-  #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-
-
+  # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   # # GET /cart_items/1/edit
   # def edit
@@ -24,7 +18,7 @@ class CartItemsController < ApplicationController
 
     respond_to do |format|
       if @cart_item.save
-        format.html { redirect_to cart_item_url(@cart_item), notice: "Cart item was successfully created." }
+        format.html { redirect_to cart_item_url(@cart_item), notice: 'Cart item was successfully created.' }
         format.json { render :show, status: :created, location: @cart_item }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -51,19 +45,20 @@ class CartItemsController < ApplicationController
     @cart_item.destroy
 
     respond_to do |format|
-      format.html { redirect_to cart_items_url, notice: "Cart item was successfully destroyed." }
+      format.html { redirect_to cart_items_url, notice: 'Cart item was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cart_item
-      @cart_item = CartItem.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def cart_item_params
-      params.fetch(:cart_item, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cart_item
+    @cart_item = CartItem.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def cart_item_params
+    params.fetch(:cart_item, {})
+  end
 end
