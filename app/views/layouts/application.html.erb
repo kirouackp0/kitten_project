@@ -13,6 +13,31 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+    <ul class="flex">
+      <li class="mr-6">
+        <a class="text-blue-500 hover:text-blue-800" href="#">Active</a>
+      </li>
+      <li class="mr-6">
+        <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
+      </li>
+      <%if session[:user_id] == nil%>
+      <li class="mr-6">
+          <%=link_to "S'inscrire", new_user_registration_path, class: "text-white me-3"%>
+      </li>
+      <li class="mr-6">
+          <%=link_to "Se connecter", new_user_session_path, class: "text-white"%>
+      </li>
+        <%else%>
+      <li class="mr-6">
+          <%= button_to "Se déconnecter", session_path(session[:user_id]), method: :delete, class: "text-white border border-0" %>
+      </li>
+        <%end%>
+      <li class="mr-6">
+        <a class="text-gray-400 cursor-not-allowed" href="#">Disabled</a>
+      </li>
+    </ul>
+
     <%= yield %>
   </body>
 </html>
