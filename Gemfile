@@ -55,6 +55,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
+  gem "letter_opener"
 end
 
 group :development do
@@ -78,3 +79,11 @@ end
 gem "devise", "~> 4.9"
 
 gem "faker", "~> 3.2"
+
+gem "dotenv", "~> 2.8"
+
+gem "dockerfile-rails", ">= 1.5", group: :development
+
+gem "sentry-ruby", "~> 5.10"
+
+gem "sentry-rails", "~> 5.10"
