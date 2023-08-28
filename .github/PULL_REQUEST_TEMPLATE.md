@@ -13,8 +13,4 @@
 ### Screenshots (if appropriate)
 (Your answer here.)
 
-### Questions:
-- Is there a blog post?
-- Does the knowledge base need an update?
-- Does this add new dependencies which need to be added?
-
+### Are there any breaking changes?
