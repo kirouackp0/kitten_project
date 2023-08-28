@@ -9,7 +9,7 @@ require "faker"
 Item.destroy_all
 
 
-10.times do
+20.times do
     Item.create!(
         title: Faker::Lorem.characters(number: 10),
         description: Faker::Lorem.sentence(word_count: 10),
