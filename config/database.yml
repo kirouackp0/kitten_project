@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: kitten_project_production
-  username: kitten_project
+  username: <%= ENV["KITTEN_PROJECT_DATABASE_NAME"] %>
   password: <%= ENV["KITTEN_PROJECT_DATABASE_PASSWORD"] %>
