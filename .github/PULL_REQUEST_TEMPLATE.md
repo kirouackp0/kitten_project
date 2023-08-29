@@ -1,3 +1,9 @@
+### Ticket Link
+(Found on Trello in your ticket description)
+
+### User Story
+(Linked to on Trello in your ticket description)
+
 ### What does this PR do?
 (Your answer here.)
 
