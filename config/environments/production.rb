@@ -95,6 +95,7 @@ Rails.application.configure do
 
   # Store files on Amazon S3.
   config.active_storage.service = :amazon
+
   ActionMailer::Base.smtp_settings = {
     user_name: ENV.fetch('MAILJET_LOGIN', nil),
     password: ENV.fetch('MAILJET_PWD', nil),
