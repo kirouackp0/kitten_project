@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+    
+.signup-signin-outercontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+     min-height: 100vh;
+}
+    
+.signup-signin-innercontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 15px 15px #fef4e8;
+    border-radius: 20px;
+    padding: 20px 50px 20px 50px;
+    background-color: #fcbfb7;
+}
+    
+h1, .field {
+    margin: 20px 0;
+}
+    
+.submit-button {
+    border-radius: 5px;
+    border: solid 2px black;
+    padding: 5px;
+    background-color: black;
+    color: #fcbfb7;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    margin-bottom: 10px;
+}
+    
+.actions {
+    text-align: center;
+}
+    
+button:hover {
+    background-color: #fcbfb7;
+    color: black;
+}
+    
+h1 {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+    
+.field input[type="password"],
+.field input[type="email"] {
+    border-radius: 5px;
+    background-color: #fef4e8;
+    padding: 10px 10px 10px 15px;
+}
+    
+.field input::placeholder {
+    color: black;
+}
+    
+.logo-signup-signin {
+    width: 150px;
+    height: 150px;
+}

@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    <!-- Your CSS styles here -->
-  </style>
-  <%= stylesheet_link_tag "registrations", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag 'registrations_sessions', media: 'all' %>
 </head>
 
 <body>
   <div class="signup-signin-outercontainer">
     <div class="signup-signin-innercontainer">
       <h1>SIGN UP</h1>
-      <div class="input-container">
+      <%= image_tag "chat.png", alt: "logo", class: "logo-signup-signin"%>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
 
         <div class="field">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "✉️ Email" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "✉️   Email" %>
         </div>
 
         <div class="field">
           <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password", placeholder: "🔒 Password" %>
+          <%= f.password_field :password, autocomplete: "new-password", placeholder: "🔒   Password" %>
         </div>
 
         <div class="field">
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "🔒 Confirm password" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "🔒   Confirm password" %>
         </div>
 
         <div class="actions">
-          <button><%= f.submit "Sign Up" %></button>
+          <button class="submit-button"><%= f.submit "Sign Up" %></button>
         </div>
-      </div>
-      <div class="innercontainer-buttons">
-        <p>Or, if you already have an account, <%= render "devise/shared/links" %><a href="/users/sign_in">here</a></p>
-      </div>
+        <p class="onblackbg"><%= render "devise/shared/links" %><a href="/users/sign_in"></a></p>
       <% end %>
-
     </div>
   </div>
 </body>

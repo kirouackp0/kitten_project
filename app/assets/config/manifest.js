@@ -1,4 +1,4 @@
 //= link_tree ../images
 //= link_tree ../builds
 //= link application.js
-//= link registrations.css
+//= link registrations_sessions.css
